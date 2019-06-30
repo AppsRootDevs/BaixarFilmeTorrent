@@ -15,6 +15,7 @@ import com.appsrootdevs.bft.*;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import com.google.android.gms.ads.*;
 
 public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener
 {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     private WebView mWebView;
     private CoordinatorLayout coordinatorLayout;
 	private boolean mValue;
+	private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,8 +38,14 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         setContentView(R.layout.main_activity);
 		openDialog();
 
-
-
+		// Initialize the Mobile Ads SDK.
+		MobileAds.initialize(this, "ca-app-pub-6798325147804093~4999060219");
+        adView = (AdView) findViewById(R.id.ad_view);
+        AdRequest adRequest = new AdRequest.Builder()
+			.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+			.build();
+        adView.loadAd(adRequest);
+		
 		mWebView = (WebView) findViewById(R.id.mainWebView);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.mainSwipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(MainActivity.this);

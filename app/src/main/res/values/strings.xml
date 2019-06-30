@@ -5,8 +5,4 @@
 	<string name="fail_on_loading_of_page">"Falha no carregamento do página!"</string>
 	<string name="no_bittorent_client_installed_on_the_system">Nenhum cliente de bittorent instalado no sistema</string>
 	<string name="please_check_your_internet_connection">Verifique a conexão com a sua Internet</string>
-
-	<!-- String Admob -->
-	<string name="id_app">ca-app-pub-6798325147804093~4999060219</string>
-	<string name="id_banner">ca-app-pub-6798325147804093/8555161841</string>
 </resources>
