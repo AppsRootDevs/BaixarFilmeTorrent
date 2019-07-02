@@ -9,15 +9,14 @@
 
 	<include
 		layout="@layout/main_content"/>
-	
+
 	<com.google.android.gms.ads.AdView
-        android:id="@+id/ad_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-6798325147804093/8555161841" />
+		android:id="@+id/ad_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		ads:adSize="BANNER"
+		ads:adUnitId="@string/banner_ad_unit_id"/>
 
 </android.support.design.widget.CoordinatorLayout>
 

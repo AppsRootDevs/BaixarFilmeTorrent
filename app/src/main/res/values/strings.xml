@@ -5,4 +5,11 @@
 	<string name="fail_on_loading_of_page">"Falha no carregamento do página!"</string>
 	<string name="no_bittorent_client_installed_on_the_system">Nenhum cliente de bittorent instalado no sistema</string>
 	<string name="please_check_your_internet_connection">Verifique a conexão com a sua Internet</string>
+	
+	
+	<string name="banner_ad_unit_id">ca-app-pub-6798325147804093/8555161841</string>
+	<string name="app_ad_unit_id">ca-app-pub-6798325147804093~4999060219</string>
+	<!-- This is an ad unit ID for a test ad. Replace with your own banner ad unit id. -->
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+	<string name="app_ad_unit_id_test">ca-app-pub-3940256099942544~3347511713</string>
 </resources>

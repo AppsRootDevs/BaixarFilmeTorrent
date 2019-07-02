@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 		openDialog();
 
 		// Initialize the Mobile Ads SDK.
-		MobileAds.initialize(this, "ca-app-pub-6798325147804093~4999060219");
+		MobileAds.initialize(this, getString(R.string.app_ad_unit_id));
         adView = (AdView) findViewById(R.id.ad_view);
         AdRequest adRequest = new AdRequest.Builder()
 			.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 			.build();
         adView.loadAd(adRequest);
-		
+
 		mWebView = (WebView) findViewById(R.id.mainWebView);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.mainSwipeRefreshLayout);
         swipeRefreshLayout.setOnRefreshListener(MainActivity.this);
@@ -191,5 +191,31 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
             getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("mValue", false).commit();
         }
+    }
+	/** Called when leaving the activity */
+    @Override
+    public void onPause() {
+        if (adView != null) {
+            adView.pause();
+        }
+        super.onPause();
+    }
+
+    /** Called when returning to the activity */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (adView != null) {
+            adView.resume();
+        }
+    }
+
+    /** Called before the activity is destroyed */
+    @Override
+    public void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
     }
 }
