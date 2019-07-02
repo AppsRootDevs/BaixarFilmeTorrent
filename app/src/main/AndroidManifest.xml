@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.appsrootdevs.bft"
-	android:versionCode="190630"
-	android:versionName="19.06.30">
+	android:versionCode="190702"
+	android:versionName="19.07.02">
 
 	<uses-sdk
-		android:minSdkVersion="21"
+		android:minSdkVersion="16"
 		android:targetSdkVersion="28"/>
 
 	<uses-permission android:name="android.permission.INTERNET" />
